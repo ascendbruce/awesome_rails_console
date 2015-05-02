@@ -1,8 +1,8 @@
-# AwesomePry
+# AwesomeRailsConsole
 
 This gem was inspired by [Using pry in production](https://bugsnag.com/blog/production-pry), [jazz_hands](https://github.com/nixme/jazz_hands) and [jazz_fingers](https://github.com/plribeiro3000/jazz_fingers).
 
-The pros of AwesomePry are:
+The pros of AwesomeRailsConsole are:
 
 * Less gem dependances (Require infrequent used gems only when you want it)
 * Simpler prompt modification (More like the default pry prompt you're familiar with)
@@ -65,7 +65,7 @@ This gem depends on following gems. Thus you can use all functionalities they pr
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'awesome_pry'
+gem 'awesome_rails_console'
 ```
 
 And then execute:
@@ -82,7 +82,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/awesome_pry/fork )
+1. Fork it ( https://github.com/ascendbruce/awesome_rails_console/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

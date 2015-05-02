@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'awesome_pry/version'
+require 'awesome_rails_console/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "awesome_pry"
-  spec.version       = AwesomePry::VERSION
+  spec.name          = "awesome_rails_console"
+  spec.version       = AwesomeRailsConsole::VERSION
   spec.authors       = ["Bruce Li"]
   spec.email         = ["ascendbruce@gmail.com"]
 
   spec.summary       = %q{Simple and useful rails console enhancements}
   spec.description   = %q{Enhance rails console by using awesome_print, pry and several pry plugins. And useful prompt tweaks. Makes rails console awesome by default.}
-  spec.homepage      = "https://github.com/ascendbruce/awesome_pry"
+  spec.homepage      = "https://github.com/ascendbruce/awesome_rails_console"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "pry-rails"
   spec.add_dependency "awesome_print"
 
-  # Following are only required in development and test mode (in lib/awesome_pry/railtie.rb)
+  # Following are only required in development and test mode (in lib/awesome_rails_console/railtie.rb)
   spec.add_dependency "pry-stack_explorer"
   spec.add_dependency "hirb"
   spec.add_dependency "hirb-unicode"

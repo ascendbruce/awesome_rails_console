@@ -13,9 +13,9 @@ if Rails.env.development? || Rails.env.test?
   end
 end
 
-module AwesomePry
+module AwesomeRailsConsole
   class Railtie < Rails::Railtie
-    initializer "awesome_pry.initialize" do |app|
+    initializer "awesome_rails_console.initialize" do |app|
       disables_pry_plugin_loading
       use_awesome_print_for_formatting
       set_prompt_name_to_project_name
