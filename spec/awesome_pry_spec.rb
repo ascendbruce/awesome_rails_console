@@ -5,7 +5,5 @@ describe AwesomePry do
     expect(AwesomePry::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
-  end
+  # TODO: Add more test or remove rspec entirely
 end
