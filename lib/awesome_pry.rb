@@ -1,5 +1,2 @@
 require "awesome_pry/version"
-
-module AwesomePry
-  # Your code goes here...
-end
+require "awesome_pry/railtie" if defined?(Rails)
