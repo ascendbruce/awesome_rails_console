@@ -57,7 +57,7 @@ Put following statment (breakpoint) in your code. And execute it.
 binding.pry
 ```
 
-After enter a pry debug session. Try:
+After entering a pry debug session. Try:
 
 ```ruby
 next
@@ -78,7 +78,7 @@ down
 
 ### More
 
-This gem depends on following gems. Thus you can use all functionalities they provide.
+awesome_rails_console depends on following gems. Thus you can use all functionalities they provide.
 
 * [pry-rails](https://github.com/rweng/pry-rails)
 * [pry-byebug](https://github.com/deivid-rodriguez/pry-byebug)
@@ -107,6 +107,10 @@ And restart your rails console.
 gem 'awesome_rails_console', github: 'ascendbruce/awesome_rails_console', branch: 'bring-your-own-debugger'
 gem 'pry-debugger'
 ```
+
+## Changelog
+
+See CHANGELOG.md.
 
 ## Development
 
