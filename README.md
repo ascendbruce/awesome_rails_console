@@ -101,6 +101,13 @@ And then execute:
 
 And restart your rails console.
 
+### For Ruby 1.9
+
+```ruby
+gem 'awesome_rails_console', github: 'ascendbruce/awesome_rails_console', branch: 'bring-your-own-debugger'
+gem 'pry-debugger'
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
