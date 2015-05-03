@@ -49,16 +49,43 @@ table User.last(3), markdown: true
 
 ![](http://i.imgur.com/KRqvaBA.png)
 
+### Debugging with pry-byebug
+
+Put following statment (breakpoint) in your code. And execute it.
+
+```ruby
+binding.pry
+```
+
+After enter a pry debug session. Try:
+
+```ruby
+next
+step
+whereami
+continue
+```
+
+### Walk the stack with pry-stack_explorer
+
+In a pry debug session. Try:
+
+```ruby
+show-stack
+up
+down
+```
+
 ### More
 
 This gem depends on following gems. Thus you can use all functionalities they provide.
 
-* pry-rails
-* pry-byebug
-* pry-stack_explorer
-* awesome_print
-* hirb
-* hirb-unicode
+* [pry-rails](https://github.com/rweng/pry-rails)
+* [pry-byebug](https://github.com/deivid-rodriguez/pry-byebug)
+* [pry-stack_explorer](https://github.com/pry/pry-stack_explorer)
+* [awesome_print](https://github.com/michaeldv/awesome_print)
+* [hirb](https://github.com/cldwalker/hirb)
+* [hirb-unicode](https://github.com/miaout17/hirb-unicode)
 
 ## Installation
 
