@@ -18,21 +18,18 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.required_ruby_version = ">= 2.0.0"
+
   # Runtime dependencies
   spec.add_dependency "railties"
   spec.add_dependency "pry-rails"
   spec.add_dependency "awesome_print"
 
   # Following are only required in development and test mode (in lib/awesome_rails_console/railtie.rb)
+  spec.add_dependency "pry-byebug"
   spec.add_dependency "pry-stack_explorer"
   spec.add_dependency "hirb"
   spec.add_dependency "hirb-unicode"
-
-  if RUBY_VERSION > "2"
-    spec.add_dependency "pry-byebug"
-  else
-    spec.add_dependency "pry-debugger"
-  end
 
   # gem development dependency
   spec.add_development_dependency "bundler", "~> 1.9"

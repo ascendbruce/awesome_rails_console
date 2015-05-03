@@ -2,15 +2,10 @@ require "pry-rails"
 require "awesome_print"
 
 if Rails.env.development? || Rails.env.test?
+  require "pry-byebug"
   require "pry-stack_explorer"
   require "hirb"
   require "hirb-unicode"
-
-  if RUBY_VERSION > "2"
-    require "pry-byebug"
-  else
-    require "pry-debugger"
-  end
 end
 
 module AwesomeRailsConsole

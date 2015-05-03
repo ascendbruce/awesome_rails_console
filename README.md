@@ -54,7 +54,7 @@ table User.last(3), markdown: true
 This gem depends on following gems. Thus you can use all functionalities they provide.
 
 * pry-rails
-* pry-debugger / pry-byebug (depending on your ruby version)
+* pry-byebug
 * pry-stack_explorer
 * awesome_print
 * hirb
