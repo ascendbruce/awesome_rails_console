@@ -16,7 +16,7 @@ The pros of AwesomeRailsConsole are:
 
 Prevents you from accidentally changing production data to the wrong project.
 
-![](http://i.imgur.com/fVDu0Oj.png)
+![](http://i.imgur.com/CKrJYqk.png)
 
 ### Beautiful formatting with pry and awesome_print
 
@@ -31,7 +31,7 @@ Make it easy to read. Reduce the pain while debugging.
 ap (1..100).to_a, limit: 5
 ```
 
-![](http://i.imgur.com/I5zE8Jp.png)
+![](http://i.imgur.com/I1iV8n9.png)
 
 ## Installation
 

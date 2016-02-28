@@ -27,19 +27,9 @@ module AwesomeRailsConsole
     def show_rails_env_name_before_prompt
       old_prompt = Pry.config.prompt
 
-      # TODO: Change to Pry::Helpers::Text.red/red/yellow(...) someday.
-      # See https://github.com/pry/pry/issues/493 for detail.
-      env = if Rails.env.production?
-              "\001\e[0;31m\002#{Rails.env.upcase}\001\e[0m\002"
-            elsif Rails.env.development?
-              "\001\e[0;32m\002#{Rails.env.upcase}\001\e[0m\002"
-            else
-              "\001\e[0;33m\002#{Rails.env.upcase}\001\e[0m\002"
-            end
-
       Pry.config.prompt = [
-        proc { |*a| "#{env} #{old_prompt.first.call(*a)}"  },
-        proc { |*a| "#{env} #{old_prompt.second.call(*a)}" }
+        proc { |*a| "#{Rails.env.classify} #{old_prompt.first.call(*a)}"  },
+        proc { |*a| "#{Rails.env.classify} #{old_prompt.second.call(*a)}" }
       ]
     end
   end
