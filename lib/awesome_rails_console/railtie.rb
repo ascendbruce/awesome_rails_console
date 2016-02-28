@@ -1,13 +1,6 @@
 require "pry-rails"
 require "awesome_print"
 
-if Rails.env.development? || Rails.env.test?
-  require "pry-byebug"
-  require "pry-stack_explorer"
-  require "hirb"
-  require "hirb-unicode"
-end
-
 module AwesomeRailsConsole
   class Railtie < Rails::Railtie
     initializer "awesome_rails_console.initialize" do |app|

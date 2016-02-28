@@ -26,12 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "pry-rails"
   spec.add_dependency "awesome_print"
 
-  # Following are only required in development and test mode (in lib/awesome_rails_console/railtie.rb)
-  spec.add_dependency "pry-byebug"
-  spec.add_dependency "pry-stack_explorer"
-  spec.add_dependency "hirb"
-  spec.add_dependency "hirb-unicode"
-
   # gem development dependency
   spec.add_development_dependency "bundler", "~> 1.9"
   spec.add_development_dependency "rake", "~> 10.0"
