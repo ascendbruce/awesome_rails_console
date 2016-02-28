@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v0.3.0
+
+* Remove `pry-byebug`, `pry-stack_explorer` and `hirb` dependency. Please add them into your application `Gemfile` if you still want to use.
+* Remove color indicator from prompt.
+
 ## v0.2.1
 
 * No changes in functionality. Release for updating information on rubygems.org.
