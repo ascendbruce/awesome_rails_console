@@ -1,12 +1,13 @@
-# AwesomeRailsConsole
+# Make Your Rails Console Awesome With One-line
 
 This gem was inspired by [Using pry in production](https://bugsnag.com/blog/production-pry), [jazz_hands](https://github.com/nixme/jazz_hands) and [jazz_fingers](https://github.com/plribeiro3000/jazz_fingers).
 
-The pros of AwesomeRailsConsole are:
+The pros of `AwesomeRailsConsole` are:
 
 * Less gem dependances (Require infrequent used gems only when you want it)
 * Simpler prompt modification (More like the default pry prompt you're familiar with)
 * No configurable options at all (You don't need to worry about configuration)
+* No debugger or hirb dependancy. Which debugger to use is fully controlled by you.
 
 > If you really want to do a lot of customization. You may consider just editing your `Gemfile`, `.pryrc` and `config/initializers/pry.rb`. Or fork this project.
 
@@ -45,11 +46,11 @@ And then execute:
 
     $ bundle
 
-And restart your rails console.
+And restart your rails console. (You may need to restart spring also)
 
 ## Changelog
 
-See CHANGELOG.md.
+See `CHANGELOG.md`.
 
 ## Development
 
