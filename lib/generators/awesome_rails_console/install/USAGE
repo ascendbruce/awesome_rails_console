@@ -1,0 +1,5 @@
+Description:
+    Install hirb, pry-byebug, pry-stack_explorer to make your rails console even more awesome
+
+Example:
+    rails generate awesome_rails_console:install
