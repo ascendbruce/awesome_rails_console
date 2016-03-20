@@ -1,15 +1,25 @@
-# Make Your Rails Console Awesome With One-line
+# Make Your Rails Console Awesome
 
 This gem was inspired by [Using pry in production](https://bugsnag.com/blog/production-pry), [jazz_hands](https://github.com/nixme/jazz_hands) and [jazz_fingers](https://github.com/plribeiro3000/jazz_fingers).
 
-The pros of `AwesomeRailsConsole` are:
+The pros of `awesome_rails_console` are:
 
-* Less gem dependances (Require infrequent used gems only when you want it)
-* Simpler prompt modification (More like the default pry prompt you're familiar with)
-* No configurable options at all (You don't need to worry about configuration)
-* No debugger or hirb dependancy. Which debugger to use is fully controlled by you.
+* Less gem dependances (You can remove enhancement gems easily)
+* Simpler prompt modification (Closer to the default pry prompt you're familiar with)
+* No need to worry about configuration (Not much configurable options available)
 
-> If you really want to do a lot of customization. You may consider just editing your `Gemfile`, `.pryrc` and `config/initializers/pry.rb`. Or fork this project.
+## TL; DR;
+
+``` ruby Gemfile
+gem 'awesome_rails_console'
+```
+
+``` sh (terminal)
+bundle
+rails g awesome_rails_console:install
+spring stop
+rails c
+```
 
 ## Features
 
@@ -34,19 +44,39 @@ ap (1..100).to_a, limit: 5
 
 ![](http://i.imgur.com/I1iV8n9.png)
 
+### Print table in console
+
+With Hirb (optional enhancement)
+
+Very handy when you need to paste some data into issue tracking system.
+
+![](http://i.imgur.com/9z3XDSU.png)
+
+### Debugger
+
+With pry-byebug (optional enhancement)
+
+Insert `binding.pry` (break point) to start debugging. See [pry-byebug](https://github.com/deivid-rodriguez/pry-byebug) For detail.
+
+![](http://i.imgur.com/mJbC24h.png)
+
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's `Gemfile`:
 
 ```ruby
 gem 'awesome_rails_console'
 ```
 
-And then execute:
+And then execute in terminal:
 
     $ bundle
 
-And restart your rails console. (You may need to restart spring also)
+Install and config enhancement gems: (optinal)
+
+    $ rails generate awesome_rails_console:install
+
+Finally, restart your rails console. (You may need to restart `spring` also)
 
 ## Changelog
 
