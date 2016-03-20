@@ -10,11 +10,15 @@ The pros of `awesome_rails_console` are:
 
 ## TL; DR;
 
-``` ruby Gemfile
+Gemfile:
+
+``` ruby
 gem 'awesome_rails_console'
 ```
 
-``` sh (terminal)
+In terminal:
+
+``` sh
 bundle
 rails g awesome_rails_console:install
 spring stop
