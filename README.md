@@ -20,7 +20,8 @@ In terminal:
 
 ``` sh
 bundle
-rails g awesome_rails_console:install
+rails g awesome_rails_console:install    #This will include dependancy gems to the gemfile
+bundle
 spring stop
 rails c
 ```
