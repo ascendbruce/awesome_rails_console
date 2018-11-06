@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.4.2
+
+* Replace `hirb-unicode` with `hirb-unicode-steakknife` in optional enhancement. (Run `rails generate awesome_rails_console:install` to install them)
+
 ## v0.4.1
 
 * Replace `hirb-unicode` with `hirb-unicode-steakknife` in optional enhancement. (Run `rails generate awesome_rails_console:install` to install them)
