@@ -6,7 +6,7 @@ class AwesomeRailsConsole::InstallGenerator < Rails::Generators::Base
   def update_gemfile
     gem_group :development, :test do
       gem 'hirb'
-      gem 'hirb-unicode-steakknife', require: 'unicode-steakknife'
+      gem 'hirb-unicode-steakknife', require: 'hirb-unicode'
       gem 'pry-byebug'
       gem 'pry-stack_explorer'
     end
