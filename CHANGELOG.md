@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.4.3
+
+* Fix my stupid mistake on v0.4.2
+
 ## v0.4.2
 
 * Replace `hirb-unicode` with `hirb-unicode-steakknife` in optional enhancement. (Run `rails generate awesome_rails_console:install` to install them)
