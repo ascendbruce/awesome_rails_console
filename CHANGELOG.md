@@ -2,15 +2,17 @@
 
 ## v0.4.3
 
-* Fix my stupid mistake on v0.4.2
+* Fix my stupid mistake on v0.4.2: Require hirb-unicode-steakknife as hirb-unicode
 
-## v0.4.2
+## v0.4.2 [DO NOT USE]
+
+* Require hirb-unicode-steakknife as unicode-steakknife
+* BUG: The require name was wrong
+
+## v0.4.1 [DO NOT USE]
 
 * Replace `hirb-unicode` with `hirb-unicode-steakknife` in optional enhancement. (Run `rails generate awesome_rails_console:install` to install them)
-
-## v0.4.1
-
-* Replace `hirb-unicode` with `hirb-unicode-steakknife` in optional enhancement. (Run `rails generate awesome_rails_console:install` to install them)
+* BUG: It doesn't require properly
 
 ## v0.4.0
 
