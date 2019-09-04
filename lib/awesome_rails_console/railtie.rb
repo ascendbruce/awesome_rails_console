@@ -21,7 +21,7 @@ module AwesomeRailsConsole
     end
 
     def set_prompt_name_to_project_name
-      Pry.config.prompt_name = Rails.application.class.parent_name.underscore.dasherize
+      Pry.config.prompt_name = Rails.application.class.module_parent_name.underscore.dasherize
     end
 
     def show_rails_env_name_before_prompt
