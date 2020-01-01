@@ -4,11 +4,11 @@ This gem was inspired by [Using pry in production](https://bugsnag.com/blog/prod
 
 The pros of `awesome_rails_console` are:
 
-* Less gem dependances (You can remove enhancement gems easily)
-* Simpler prompt modification (Closer to the default pry prompt you're familiar with)
-* No need to worry about configuration (Not much configurable options available)
+* Less gem dependances (Only pry-rails and awesome_print other than rails. The rest are optional)
+* Simpler prompt modification (Similar to the default prompt you're already familiar with)
+* No need to worry about configuration (because there are not much options anyway)
 
-## TL; DR;
+## Installation
 
 Gemfile:
 
@@ -20,9 +20,13 @@ In terminal:
 
 ``` sh
 bundle
-rails g awesome_rails_console:install    #This will include dependency gems to the gemfile
+rails g awesome_rails_console:install # This will include dependency gems to the gemfile
+# you should review your Gemfile at this point (and adjust if needed)
+```
+
+```sh
 bundle
-spring stop
+spring stop # to restart spring, if you are using it
 rails c
 ```
 
@@ -64,39 +68,3 @@ With pry-byebug (optional enhancement)
 Insert `binding.pry` (break point) to start debugging. See [pry-byebug](https://github.com/deivid-rodriguez/pry-byebug) For detail.
 
 ![](http://i.imgur.com/mJbC24h.png)
-
-## Installation
-
-Add this line to your application's `Gemfile`:
-
-```ruby
-gem 'awesome_rails_console'
-```
-
-And then execute in terminal:
-
-    $ bundle
-
-Install and config enhancement gems: (optinal)
-
-    $ rails generate awesome_rails_console:install
-
-Finally, restart your rails console. (You may need to restart `spring` also)
-
-## Changelog
-
-See `CHANGELOG.md`.
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-1. Fork it ( https://github.com/ascendbruce/awesome_rails_console/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
