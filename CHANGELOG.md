@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.4.4
+
+* Fix deprecation warning `Module#parent_name` in Rails 6.x
+
 ## v0.4.3
 
 * Fix my stupid mistake on v0.4.2: Require hirb-unicode-steakknife as hirb-unicode
