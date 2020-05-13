@@ -3,9 +3,9 @@ require 'spec_helper'
 require 'awesome_rails_console/prompts'
 
 describe AwesomeRailsConsole::Prompts do
-  describe '.choose_prompt_for_pry_version' do
-    let(:old_prompt) { double('Pry.config.prompt') }
+  let(:old_prompt) { double('Pry.config.prompt') }
 
+  describe '.choose_prompt_for_pry_version' do
     before do
       expect(Pry.config).to receive(:prompt).and_return(old_prompt)
     end
@@ -30,6 +30,21 @@ describe AwesomeRailsConsole::Prompts do
         expect(described_class).to receive(:post_pry_13_prompt).with(old_prompt)
         described_class.choose_prompt_for_pry_version
       end
+    end
+  end
+
+  describe '.pre_pry_13_prompt' do
+    subject { described_class.pre_pry_13_prompt(old_prompt) }
+
+    it 'returns array of procs' do
+      expect(subject).to be_a_kind_of(Array)
+      expect(subject.all?{|p| p.is_a?(Proc)}).to be_truthy
+    end
+  end
+
+  describe '.post_pry_13_prompt' do
+    it 'returns instance of Pry::Prompt' do
+      expect(described_class.post_pry_13_prompt(old_prompt)).to be_a_kind_of(Pry::Prompt)
     end
   end
 end
