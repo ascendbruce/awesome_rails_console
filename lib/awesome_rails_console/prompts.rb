@@ -14,7 +14,6 @@ module AwesomeRailsConsole
 
     # Define a custom prompt using pre pry-0.13.0 syntax
     def self.pre_pry_13_prompt(old_prompt)
-      puts "pre"
       [
         proc { |*a| "#{Rails.env.classify} #{old_prompt.first.call(*a)}"  },
         proc { |*a| "#{Rails.env.classify} #{old_prompt.second.call(*a)}" }
@@ -24,7 +23,6 @@ module AwesomeRailsConsole
     # Pry 0.13.0 introduces new syntax for registering a prompt.
     # https://github.com/pry/pry/wiki/Customization-and-configuration#Config_prompt
     def self.post_pry_13_prompt(old_prompt)
-      puts "post"
       Pry::Prompt.new(
         :awesome_rails_console, # name
         "awesome_rails_console default prompt", # description
