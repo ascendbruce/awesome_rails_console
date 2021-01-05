@@ -31,12 +31,16 @@ module AwesomeRailsConsole
     end
 
     def show_rails_env_name_before_prompt
-      old_prompt = Pry.config.prompt
+      old_prompt = Pry::Prompt[:default]
 
-      Pry.config.prompt = [
-        proc { |*a| "#{Rails.env.classify} #{old_prompt.first.call(*a)}"  },
-        proc { |*a| "#{Rails.env.classify} #{old_prompt.second.call(*a)}" }
-      ]
+      Pry.config.prompt = Pry::Prompt.new(
+        "awesome",
+        "awesome rails console",
+        [
+          proc { |*a| "#{Rails.env.classify} #{old_prompt.wait_proc.call(*a)}"  },
+          proc { |*a| "#{Rails.env.classify} #{old_prompt.incomplete_proc.call(*a)}" },
+        ],
+      )
     end
   end
 end
