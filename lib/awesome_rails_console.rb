@@ -1,2 +1,5 @@
 require "awesome_rails_console/version"
-require "awesome_rails_console/railtie" if defined?(Rails)
+if defined?(Rails)
+  require "awesome_rails_console/prompts"
+  require "awesome_rails_console/railtie"
+end

@@ -31,12 +31,7 @@ module AwesomeRailsConsole
     end
 
     def show_rails_env_name_before_prompt
-      old_prompt = Pry.config.prompt
-
-      Pry.config.prompt = [
-        proc { |*a| "#{Rails.env.classify} #{old_prompt.first.call(*a)}"  },
-        proc { |*a| "#{Rails.env.classify} #{old_prompt.second.call(*a)}" }
-      ]
+      Prompts.choose_prompt_for_pry_version
     end
   end
 end
