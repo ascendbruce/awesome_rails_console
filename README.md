@@ -68,3 +68,24 @@ With pry-byebug (optional enhancement)
 Insert `binding.pry` (break point) to start debugging. See [pry-byebug](https://github.com/deivid-rodriguez/pry-byebug) For detail.
 
 ![](http://i.imgur.com/mJbC24h.png)
+
+## Gem development
+
+### Debug
+
+```rb
+# local
+gem 'awesome_rails_console', path: '/path/to/folder/awesome_rails_console'
+
+# github branch
+gem 'awesome_rails_console', github: 'ascendbruce/awesome_rails_console.git', branch: 'debug-branch'
+```
+
+### Release new version
+
+Reference: <https://guides.rubygems.org/make-your-own-gem/>
+
+```sh
+gem build awesome_rails_console.gemspec
+gem push awesome_rails_console-?.?.?.gem
+```
