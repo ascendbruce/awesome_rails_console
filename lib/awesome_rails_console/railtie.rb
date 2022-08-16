@@ -7,7 +7,12 @@ module AwesomeRailsConsole
       disables_pry_plugin_loading
       use_awesome_print_for_formatting
       set_prompt_name_to_project_name
-      show_rails_env_name_before_prompt
+
+      if Pry::VERSION >= "0.13.0"
+        show_rails_env_name_before_prompt_for_pry_since_v0_13
+      else
+        show_rails_env_name_before_prompt_for_pry_before_v0_13
+      end
     end
 
     private
@@ -30,7 +35,20 @@ module AwesomeRailsConsole
         end
     end
 
-    def show_rails_env_name_before_prompt
+    def show_rails_env_name_before_prompt_for_pry_since_v0_13
+      old_prompt = Pry::Prompt[:default]
+
+      Pry.config.prompt = Pry::Prompt.new(
+        "awesome",
+        "awesome rails console",
+        [
+          proc { |*a| "#{Rails.env.classify} #{old_prompt.wait_proc.call(*a)}"  },
+          proc { |*a| "#{Rails.env.classify} #{old_prompt.incomplete_proc.call(*a)}" },
+        ],
+      )
+    end
+
+    def show_rails_env_name_before_prompt_for_pry_before_v0_13
       old_prompt = Pry.config.prompt
 
       Pry.config.prompt = [
