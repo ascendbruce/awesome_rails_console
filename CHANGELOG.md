@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.4.5
+
+* Fix `undefined method [] for Pry::Prompt:Class (NoMethodError)` error when entering rails console
+
 ## v0.4.4
 
 * Fix deprecation warning `Module#parent_name` in Rails 6.x
